@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700;800;900&family=Poppins:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  width: 60vw;
+  min-height: 100vh;
+  margin: auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.location-details {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.location-details-top {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(184, 188, 204, 0.5);
+}
+
+.location-details-top span {
+  color: #b8bccc;
+}
+
+.location-details-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.two-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.two-div p {
+  color: rgba(184, 188, 204, 0.5);
+}
+
+.two-div p span {
+  color: #b8bccc;
+}
+
+.location-map {
+  margin-top: 20px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 30px;
+  background-color: #575a85;
+  border-radius: 15px;
+}
+
+.location-map-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #b8bccc;
+}
+
+.location-map-area iframe {
+  width: 50vw;
+  height: 50vh;
+  border-radius: 10px;
+}
+
+.more-info {
+  margin-top: 20px;
+  width: 100%;
+  height: fit-content;
+}
+
+.more-info-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.more-info-heading {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #b8bccc;
+  text-align: center;
+}
+
+.more-info-div {
+  color: rgba(184, 188, 204, 0.5);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.more-info-div span {
+  color: #b8bccc;
+}
+.post-office-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heading-post-office-grid {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #b8bccc;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  height: 5vh;
+  border-radius: 10px;
+  border: 3px solid #575a85;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 20px;
+  gap: 10px;
+}
+
+.search-input img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.search-input input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: transparent;
+}
+
+.grid {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.single-card {
+  min-width: 400px;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #575a85;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.card-text {
+  color: #b8bccc;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-text span {
+  color: #dadce3;
+}
+
+/* Loader styles */
+
+.simple-spinner {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.simple-spinner span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-right-color: rgba(255, 255, 255, 0.7);
+  animation: spinner-anim 0.8s linear infinite;
+}
+
+@keyframes spinner-anim {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100vw;
+    padding: 30px;
+  }
+  .two-div {
+    gap: 5px;
+  }
+  .location-map {
+    margin-top: 0px;
+    min-height: 65vh;
+    gap: 30px;
+  }
+
+  .location-map-heading {
+    font-size: 20px;
+  }
+  .location-map-area iframe {
+    width: 250px;
+    height: 350px;
+  }
+  .more-info-heading {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .more-info-div {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .heading-post-office-grid {
+    font-size: 22px;
+  }
+  .search-input img {
+    width: 15px;
+    height: 15px;
+  }
+  .single-card {
+    min-width: 300px;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+}
